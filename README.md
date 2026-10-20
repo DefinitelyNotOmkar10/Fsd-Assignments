@@ -1,6 +1,18 @@
 # Frontend Development Portfolio & Assignments
 **Author:** Omkar Kumbhar  
+**Live Deployment:** https://definitelynotomkar10.github.io/Fsd-Assignments/  
 **Stack:** Vanilla JavaScript, Modern CSS3, React 18, Vite
+
+---
+
+## 🚀 Live Interactive Projects
+The vanilla web assignments (Calculator, Task Board, Registration & Validation Form) are deployed live via GitHub Pages:
+
+👉 **[Launch Live Project Suite](https://definitelynotomkar10.github.io/Fsd-Assignments/)**
+
+- **Pro Keypad Calculator:** [`/1-calculator/`](https://definitelynotomkar10.github.io/Fsd-Assignments/1-calculator/index.html)
+- **Dynamic Task Tracker:** [`/2-todo-list/`](https://definitelynotomkar10.github.io/Fsd-Assignments/2-todo-list/index.html)
+- **Account Registration & Validator:** [`/3-form-validation/`](https://definitelynotomkar10.github.io/Fsd-Assignments/3-form-validation/index.html)
 
 ---
 
@@ -8,23 +20,23 @@
 
 This repository contains a curated set of interactive frontend web development projects and components showcasing DOM manipulation, validation engines, state control, and modern UI architectures.
 
-| # | Project / Module | Technology | Directory |
-|---|------------------|------------|-----------|
-| 1 | Pro Keypad Calculator | Functions, Keypad State Machine, Event Delegation | `1-calculator` |
-| 2 | Dynamic Task Tracker | DOM Manipulation, LocalStorage, Custom State | `2-todo-list` |
-| 3 | Account Registration & Validator | Real-time Regex, Password Entropy Engine | `3-form-validation` |
-| 4 | Component Profile Showcase | React Props, Dynamic Avatar Fallbacks | `react-app` (Tab 1) |
-| 5 | Controlled Form & Live Inspector | React Two-way Binding, JSON State Inspector | `react-app` (Tab 2) |
-| 6 | Dynamic Step Counter | React `useState` Hook, Conditional Color States | `react-app` (Tab 3) |
+| # | Project / Module | Technology | Directory | Deployment |
+|---|------------------|------------|-----------|------------|
+| 1 | Pro Keypad Calculator | Functions, Keypad State Machine, Event Delegation | `1-calculator` | Live on GH Pages |
+| 2 | Dynamic Task Tracker | DOM Manipulation, LocalStorage, Custom State | `2-todo-list` | Live on GH Pages |
+| 3 | Account Registration & Validator | Real-time Regex, Password Entropy Engine | `3-form-validation` | Live on GH Pages |
+| 4 | Component Profile Showcase | React Props, Dynamic Avatar Fallbacks | `react-app` (Tab 1) | Local / Vite |
+| 5 | Controlled Form & Live Inspector | React Two-way Binding, JSON State Inspector | `react-app` (Tab 2) | Local / Vite |
+| 6 | Dynamic Step Counter | React `useState` Hook, Conditional Color States | `react-app` (Tab 3) | Local / Vite |
 
 ---
 
-## Running the Projects
+## Running the Projects Locally
 
 ### Modules 1, 2, and 3 (Vanilla JS & Modern CSS)
 No build steps or installations required.
 1. Navigate into any folder (`1-calculator`, `2-todo-list`, or `3-form-validation`).
-2. Open `index.html` directly in your favorite browser (Chrome, Edge, Safari, Firefox).
+2. Open `index.html` directly in your favorite browser (Chrome, Edge, Safari, Firefox), or open the root `index.html` to browse all three from a unified hub.
 
 ---
 
