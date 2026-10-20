@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Omkar's Calculator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="calc-wrapper">
+    <header class="calc-header">
+      <div class="brand">
+        <span class="status-dot"></span>
+        <span class="brand-text">OK · CALC-PRO</span>
+      </div>
+      <span class="model-badge">DEG</span>
+    </header>
+
+    <main class="calc">
+      <section class="screen" aria-live="polite">
+        <div id="history" class="history-display"></div>
+        <div id="display" class="current-display">0</div>
+      </section>
+
+      <div class="keys" id="keys">
+        <button class="key fn-clear" data-action="clear" aria-label="Clear all">AC</button>
+        <button class="key fn" data-action="back" aria-label="Backspace">⌫</button>
+        <button class="key op" data-op="/" aria-label="Divide">÷</button>
+        <button class="key op" data-op="*" aria-label="Multiply">×</button>
+
+        <button class="key num" data-digit="7">7</button>
+        <button class="key num" data-digit="8">8</button>
+        <button class="key num" data-digit="9">9</button>
+        <button class="key op" data-op="-" aria-label="Subtract">−</button>
+
+        <button class="key num" data-digit="4">4</button>
+        <button class="key num" data-digit="5">5</button>
+        <button class="key num" data-digit="6">6</button>
+        <button class="key op" data-op="+" aria-label="Add">+</button>
+
+        <button class="key num" data-digit="1">1</button>
+        <button class="key num" data-digit="2">2</button>
+        <button class="key num" data-digit="3">3</button>
+        <button class="key equals" data-action="equals" aria-label="Calculate">=</button>
+
+        <button class="key num zero" data-digit="0">0</button>
+        <button class="key num" data-action="dot">.</button>
+      </div>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

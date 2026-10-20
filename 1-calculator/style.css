@@ -1,0 +1,218 @@
+/* Modern Charcoal & Emerald Theme — Designed by Omkar Kumbhar */
+:root {
+  --bg-body: #0d1117;
+  --bg-surface: #161b22;
+  --bg-card: #1c2128;
+  --bg-screen: #0d1117;
+  --border-subtle: #30363d;
+  --border-focus: #10b981;
+  --text-main: #f0f6fc;
+  --text-muted: #8b949e;
+  --accent-emerald: #10b981;
+  --accent-emerald-hover: #059669;
+  --accent-emerald-glow: rgba(16, 185, 129, 0.25);
+  --btn-num-bg: #21262d;
+  --btn-num-hover: #30363d;
+  --btn-fn-bg: #2d333b;
+  --btn-fn-hover: #373e47;
+  --btn-op-bg: #1f2937;
+  --btn-op-hover: #374151;
+  --btn-op-text: #34d399;
+  --btn-clear-text: #f87171;
+  --shadow-card: 0 20px 40px -15px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(circle at 50% 20%, #1a2332 0%, var(--bg-body) 70%);
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--text-main);
+  padding: 24px 16px;
+}
+
+.calc-wrapper {
+  width: 100%;
+  max-width: 340px;
+  background: var(--bg-surface);
+  border-radius: 24px;
+  padding: 22px;
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--border-subtle);
+  backdrop-filter: blur(8px);
+}
+
+.calc-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  padding: 0 4px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--accent-emerald);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--accent-emerald);
+}
+
+.brand-text {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+}
+
+.model-badge {
+  font-size: 10px;
+  font-weight: 600;
+  background: rgba(16, 185, 129, 0.12);
+  color: var(--accent-emerald);
+  padding: 3px 8px;
+  border-radius: 6px;
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.screen {
+  background: var(--bg-screen);
+  border: 1px solid var(--border-subtle);
+  border-radius: 16px;
+  padding: 16px 18px;
+  text-align: right;
+  margin-bottom: 20px;
+  min-height: 96px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.history-display {
+  color: var(--text-muted);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  min-height: 18px;
+  letter-spacing: 0.05em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.current-display {
+  color: #ffffff;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 38px;
+  font-weight: 600;
+  line-height: 1.1;
+  word-break: break-all;
+  transition: color 0.15s ease;
+}
+
+.keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.key {
+  position: relative;
+  height: 60px;
+  font-size: 19px;
+  font-weight: 600;
+  font-family: 'JetBrains Mono', monospace;
+  border: 1px solid var(--border-subtle);
+  border-radius: 14px;
+  cursor: pointer;
+  transition: all 0.12s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+.key:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.key:active {
+  transform: translateY(1px);
+}
+
+/* Number keys */
+.key.num {
+  background: var(--btn-num-bg);
+  color: #e6edf3;
+}
+.key.num:hover {
+  background: var(--btn-num-hover);
+  border-color: #484f58;
+}
+
+/* Zero span */
+.key.zero {
+  grid-column: span 2;
+}
+
+/* Function keys */
+.key.fn {
+  background: var(--btn-fn-bg);
+  color: #c9d1d9;
+}
+.key.fn:hover {
+  background: var(--btn-fn-hover);
+}
+
+.key.fn-clear {
+  background: rgba(239, 68, 68, 0.1);
+  border-color: rgba(239, 68, 68, 0.25);
+  color: #f87171;
+}
+.key.fn-clear:hover {
+  background: rgba(239, 68, 68, 0.2);
+  border-color: rgba(239, 68, 68, 0.4);
+}
+
+/* Operator keys */
+.key.op {
+  background: var(--btn-op-bg);
+  border-color: rgba(52, 211, 153, 0.2);
+  color: var(--btn-op-text);
+  font-size: 21px;
+}
+.key.op:hover {
+  background: rgba(52, 211, 153, 0.15);
+  border-color: var(--accent-emerald);
+}
+
+/* Equals key */
+.key.equals {
+  grid-row: span 2;
+  height: 100%;
+  background: linear-gradient(135deg, var(--accent-emerald), #059669);
+  border: 1px solid #34d399;
+  color: #042f2e;
+  font-size: 24px;
+  font-weight: 700;
+  box-shadow: 0 4px 14px var(--accent-emerald-glow);
+}
+.key.equals:hover {
+  filter: brightness(1.1);
+  box-shadow: 0 6px 18px rgba(16, 185, 129, 0.4);
+}

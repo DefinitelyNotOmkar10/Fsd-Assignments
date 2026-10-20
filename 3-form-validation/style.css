@@ -1,0 +1,230 @@
+/* Sleek Charcoal & Emerald Registration Form — Designed by Omkar Kumbhar */
+:root {
+  --bg-page: #0d1117;
+  --bg-card: #161b22;
+  --bg-input: #0d1117;
+  --border-subtle: #30363d;
+  --border-focus: #10b981;
+  --border-error: #f87171;
+  --border-valid: #34d399;
+  --accent-emerald: #10b981;
+  --accent-emerald-glow: rgba(16, 185, 129, 0.25);
+  --text-main: #f0f6fc;
+  --text-muted: #8b949e;
+  --text-dim: #6e7681;
+  --shadow-card: 0 25px 50px -12px rgba(0, 0, 0, 0.75), 0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(circle at 50% 15%, #182333 0%, var(--bg-page) 70%);
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--text-main);
+  padding: 36px 16px;
+}
+
+.registration-shell {
+  width: 100%;
+  max-width: 440px;
+}
+
+.auth-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 24px;
+  padding: 34px 30px;
+  box-shadow: var(--shadow-card);
+  backdrop-filter: blur(12px);
+}
+
+.card-header {
+  margin-bottom: 24px;
+}
+
+.brand-tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--accent-emerald);
+  background: rgba(16, 185, 129, 0.12);
+  padding: 3px 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 26px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+  margin-bottom: 6px;
+}
+
+.subtitle {
+  color: var(--text-muted);
+  font-size: 13.5px;
+  line-height: 1.4;
+}
+
+.field-group {
+  margin-bottom: 16px;
+}
+
+.label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 6px;
+}
+
+label {
+  display: block;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: #c9d1d9;
+  margin-bottom: 6px;
+}
+
+.pw-hint {
+  font-size: 11px;
+  color: var(--text-dim);
+}
+
+.input-wrap {
+  position: relative;
+}
+
+input {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 14.5px;
+  font-family: inherit;
+  background: var(--bg-input);
+  color: var(--text-main);
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--border-focus);
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.18);
+  background: #111720;
+}
+
+input.is-invalid {
+  border-color: var(--border-error);
+  box-shadow: 0 0 0 3px rgba(248, 113, 113, 0.15);
+}
+
+input.is-valid {
+  border-color: var(--border-valid);
+}
+
+.pw-input-wrap {
+  display: flex;
+  gap: 8px;
+}
+
+.pw-input-wrap input {
+  flex: 1;
+}
+
+.btn-toggle-pw {
+  background: #21262d;
+  color: var(--text-main);
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  padding: 0 16px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.btn-toggle-pw:hover {
+  background: #30363d;
+  border-color: #484f58;
+}
+
+.field-msg {
+  font-size: 12.5px;
+  color: var(--border-error);
+  min-height: 18px;
+  margin-top: 4px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.strength-track {
+  height: 4px;
+  background: #21262d;
+  border-radius: 4px;
+  margin-top: 8px;
+  overflow: hidden;
+}
+
+.strength-indicator {
+  height: 100%;
+  width: 0;
+  border-radius: 4px;
+  transition: width 0.3s ease, background 0.3s ease;
+}
+
+.btn-submit {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 13px;
+  margin-top: 10px;
+  background: linear-gradient(135deg, var(--accent-emerald), #059669);
+  color: #042f2e;
+  font-size: 15px;
+  font-weight: 700;
+  font-family: inherit;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 14px var(--accent-emerald-glow);
+  transition: all 0.2s ease;
+}
+
+.btn-submit:hover {
+  filter: brightness(1.1);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(16, 185, 129, 0.4);
+}
+
+.btn-submit:active {
+  transform: translateY(1px);
+}
+
+.status-banner {
+  margin-top: 16px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  min-height: 20px;
+  transition: all 0.2s ease;
+}
+
+.status-banner.success {
+  color: #34d399;
+  background: rgba(16, 185, 129, 0.1);
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(16, 185, 129, 0.25);
+}

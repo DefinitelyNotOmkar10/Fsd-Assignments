@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Omkar's Workspace · Task Tracker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="board-card">
+    <header class="board-header">
+      <div class="title-group">
+        <span class="user-pill">Omkar Kumbhar</span>
+        <h1>Focus & Tasks</h1>
+      </div>
+      <div id="counter" class="stats-badge"></div>
+    </header>
+
+    <form id="taskForm" class="task-input-bar">
+      <div class="input-container">
+        <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="12" y1="8" x2="12" y2="16"></line>
+          <line x1="8" y1="12" x2="16" y2="12"></line>
+        </svg>
+        <input type="text" id="taskInput" placeholder="Add a new task or reminder..." autocomplete="off" />
+      </div>
+      <button type="submit" class="btn-add">Add Task</button>
+    </form>
+
+    <div class="tasks-wrapper">
+      <ul id="taskList" class="task-list"></ul>
+      <div id="emptyMsg" class="empty-state">
+        <div class="empty-icon">✓</div>
+        <p class="empty-title">All caught up!</p>
+        <p class="empty-desc">No tasks pending. Take a break or add something new.</p>
+      </div>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

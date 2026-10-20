@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Omkar Kumbhar · Full-Stack Web Development Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-page: #090d13;
+      --bg-card: #161b22;
+      --bg-hover: #1c2128;
+      --border-subtle: #30363d;
+      --border-card: #30363d;
+      --accent-emerald: #10b981;
+      --accent-emerald-light: #34d399;
+      --text-main: #f0f6fc;
+      --text-muted: #8b949e;
+      --text-dim: #6e7681;
+      --shadow-card: 0 20px 40px -15px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(255, 255, 255, 0.04);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      background: radial-gradient(circle at 50% 0%, #172436 0%, var(--bg-page) 75%);
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--text-main);
+      padding: 48px 20px 80px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .hub-container {
+      width: 100%;
+      max-width: 960px;
+    }
+
+    .hero {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: var(--accent-emerald);
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      padding: 5px 14px;
+      border-radius: 999px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .badge-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--accent-emerald);
+      border-radius: 50%;
+      box-shadow: 0 0 8px var(--accent-emerald);
+    }
+
+    h1 {
+      font-size: 38px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: #ffffff;
+      margin-bottom: 12px;
+    }
+
+    .subtitle {
+      font-size: 16px;
+      color: var(--text-muted);
+      max-width: 620px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 24px;
+      margin-bottom: 48px;
+    }
+
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 20px;
+      padding: 28px;
+      box-shadow: var(--shadow-card);
+      display: flex;
+      flex-direction: column;
+      transition: all 0.22s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: #484f58;
+      box-shadow: 0 25px 50px -15px rgba(0, 0, 0, 0.8), 0 0 20px rgba(16, 185, 129, 0.15);
+    }
+
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+
+    .module-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--accent-emerald-light);
+      background: rgba(16, 185, 129, 0.1);
+      padding: 3px 8px;
+      border-radius: 6px;
+      border: 1px solid rgba(16, 185, 129, 0.2);
+    }
+
+    .live-status {
+      font-size: 11px;
+      color: var(--text-dim);
+    }
+
+    .card h2 {
+      font-size: 21px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin-bottom: 24px;
+      flex: 1;
+    }
+
+    .tech-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 24px;
+    }
+
+    .pill {
+      font-size: 11px;
+      color: var(--text-muted);
+      background: #0d1117;
+      border: 1px solid var(--border-subtle);
+      padding: 3px 8px;
+      border-radius: 6px;
+    }
+
+    .launch-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 18px;
+      background: linear-gradient(135deg, var(--accent-emerald), #059669);
+      color: #042f2e;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 700;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+      transition: all 0.18s ease;
+    }
+
+    .launch-btn:hover {
+      filter: brightness(1.1);
+      transform: translateY(-1px);
+    }
+
+    .react-card {
+      background: rgba(22, 27, 34, 0.6);
+      border-style: dashed;
+    }
+
+    .local-tag {
+      font-size: 11px;
+      font-weight: 600;
+      color: #f59e0b;
+      background: rgba(245, 158, 11, 0.1);
+      padding: 3px 8px;
+      border-radius: 6px;
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .react-btn {
+      background: #21262d;
+      color: var(--text-muted);
+      border: 1px solid var(--border-subtle);
+      box-shadow: none;
+      cursor: default;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 13px;
+      color: var(--text-dim);
+      padding-top: 24px;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    footer a {
+      color: var(--accent-emerald-light);
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="hub-container">
+    <header class="hero">
+      <div class="badge">
+        <span class="badge-dot"></span>
+        Live Project Suite
+      </div>
+      <h1>Omkar Kumbhar · Web Projects</h1>
+      <p class="subtitle">
+        Interactive frontend assignments showcasing modern DOM interfaces, input validation, state dispatchers, and sleek dark aesthetic.
+      </p>
+    </header>
+
+    <div class="project-grid">
+      <!-- Project 1 -->
+      <article class="card">
+        <div class="card-top">
+          <span class="module-tag">01 · CALCULATOR</span>
+          <span class="live-status">Interactive</span>
+        </div>
+        <h2>Pro Calculator</h2>
+        <p>Tactile keypad calculator with arithmetic dispatchers, error prevention, state handling, and keyboard controls.</p>
+        <div class="tech-stack">
+          <span class="pill">JavaScript ES6</span>
+          <span class="pill">Keyboard Events</span>
+          <span class="pill">Modern CSS</span>
+        </div>
+        <a href="1-calculator/index.html" class="launch-btn">
+          <span>Launch Calculator</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </article>
+
+      <!-- Project 2 -->
+      <article class="card">
+        <div class="card-top">
+          <span class="module-tag">02 · TASK TRACKER</span>
+          <span class="live-status">Interactive</span>
+        </div>
+        <h2>Focus & Tasks</h2>
+        <p>Minimalist to-do tracker with local storage persistence, task counters, completion toggles, and deletion animations.</p>
+        <div class="tech-stack">
+          <span class="pill">DOM Manipulation</span>
+          <span class="pill">LocalStorage API</span>
+          <span class="pill">ES6 State</span>
+        </div>
+        <a href="2-todo-list/index.html" class="launch-btn">
+          <span>Launch Task Board</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </article>
+
+      <!-- Project 3 -->
+      <article class="card">
+        <div class="card-top">
+          <span class="module-tag">03 · AUTH PORTAL</span>
+          <span class="live-status">Interactive</span>
+        </div>
+        <h2>Registration & Validation</h2>
+        <p>Interactive account registration form with instant regex feedback, password entropy scoring, and show/hide reveal.</p>
+        <div class="tech-stack">
+          <span class="pill">Regex Engine</span>
+          <span class="pill">Entropy Meter</span>
+          <span class="pill">Form Accessibility</span>
+        </div>
+        <a href="3-form-validation/index.html" class="launch-btn">
+          <span>Launch Form Validator</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </article>
+    </div>
+
+    <footer>
+      <p>Created by <strong>Omkar Kumbhar</strong> · Hosted live on GitHub Pages</p>
+    </footer>
+  </div>
+</body>
+</html>
