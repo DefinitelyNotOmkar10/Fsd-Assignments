@@ -60,8 +60,4 @@ Powered by Vite and React 18.
 
 ---
 
-## Design System & Theme
-All applications feature a unified **Sleek Minimal Charcoal & Emerald** palette:
-- **Surface & Backgrounds:** Deep carbon `#0d1117` and card layers `#161b22`
-- **Accent:** Vibrant Emerald `#10b981` with soft ambient glows
-- **Typography:** `Plus Jakarta Sans` for clean UI readability and `JetBrains Mono` for numerical/code precision.
+
